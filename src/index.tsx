@@ -1,11 +1,13 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 
-const render = () => {
+import App from './components/App/App'
+
+const render = (Component: any) => {
   ReactDOM.render(
-    <div>Toto, world!</div>,
+    <Component />,
     document.getElementById('root')
   );
 };
 
-render()
+render(App)
