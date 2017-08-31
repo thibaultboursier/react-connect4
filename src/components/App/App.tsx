@@ -1,19 +1,7 @@
 import * as React from 'react'
+import LineView from './components/LineView/LineView'
 
-interface Props {}
-
-interface LineViewProps {
-    cols?: number
-}
-
-const LineView = ({cols=7}: LineViewProps) => {
-    const token = '.\t'
-    return <div>
-        {token.repeat(cols)}<br/>
-    </div>
-}
-
-export default class App extends React.Component<Props, void> {
+export default class App extends React.Component {
     render() {
         return <div>
             <LineView />
