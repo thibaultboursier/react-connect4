@@ -1,16 +1,16 @@
 import * as React from 'react'
-import LineView from './components/LineView/LineView'
+import ColView from './components/ColView/ColView';
 
 export default class App extends React.Component {
+    colsCount = 7;
+
     render() {
-        return <div>
-            <LineView />
-            <LineView />
-            <LineView />
-            <LineView />
-            <LineView />
-            <LineView />
-            <LineView />
-        </div>
+        let i = 0;
+        let cols = [];
+
+        for (i; i < this.colsCount; i++) {
+            cols.push(<ColView key={i} />);
+        }
+        return <div>{cols}</div>
     }
 }
